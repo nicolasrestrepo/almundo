@@ -3,7 +3,7 @@ LABEL Name=front-end Version=0.0.1
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 COPY package.json /tmp/package.json
 RUN cd /tmp && yarn install
-RUN yarn install --global serve
+RUN yarn global add  serve
 RUN mkdir -p /usr/src && cp -ar /tmp/node_modules /usr/src
 
 WORKDIR /usr/src
