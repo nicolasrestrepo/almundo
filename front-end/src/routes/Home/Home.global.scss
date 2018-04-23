@@ -1,0 +1,23 @@
+// global styles
+.btn.btn-default{
+    background-color: rgb(5, 42, 116);
+    color: #fff;
+}
+body{
+    background-color: rgb(244, 244, 244)
+}
+
+#home{
+    .hotels, .filter{
+        margin-top: 7em
+    }
+    @media (max-width: 768px) {
+        .hotels {
+            margin-top: 5em;
+        }
+        .filter{
+            margin-top: 9em
+        }
+    }
+}
+

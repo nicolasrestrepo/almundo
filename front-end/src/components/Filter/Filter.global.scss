@@ -1,0 +1,90 @@
+
+#filter{
+    position: fixed;
+    z-index: 10;
+    width: 24%;
+    @media (max-width: 768px) {
+        width: 100%
+    }
+    .title-grid > a{
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        grid-column-gap: 1em;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'Icon Name Carret';
+        align-items: center;
+        transition: transform 350ms ease-in-out;
+            .icon{
+                grid-area: Icon
+            };
+            .name{
+                grid-area: Name
+            };
+            .carret{
+                grid-area: Carret;
+                justify-self: center;
+                padding-top: 0.5em;
+            }
+            &[aria-expanded ="false"]{
+                .carret{
+                    transform: rotate(-180deg)
+                }
+             }
+        
+    }
+    
+    .panel.panel-default{
+        margin-bottom: 5px;
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+            width: 95%;
+        }
+        .panel-heading{
+          background-color: #fff;
+          border-color: #fff;
+          width: 100%;
+          a{
+              color: rgb(50, 120, 174);
+              text-decoration: none;
+              
+          }
+        }
+    }
+
+    .filter-min{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            .title-container > a{
+                display: grid;
+                grid-template-columns:  50% 50%;
+                grid-column-gap: 1em;
+                grid-template-rows: 1fr;
+                grid-template-areas: 'Name Carret';
+                transition: transform 350ms ease-in-out;
+                .name{
+                    grid-area: Name;
+                    justify-self: flex-end;
+                }
+                .carret{
+                    grid-area: Carret;
+                    justify-self: flex-start;
+                    align-items: center;
+                    padding-top: 0.5em;
+                }
+                &[aria-expanded ="false"]{
+                    .carret{
+                        transform: rotate(-180deg)
+                    }
+                 }
+            }
+    }
+    .filter-max{
+        margin-right: 10px;
+        .well{
+            padding: 4px 15px;
+            background-color: white;
+            border-color: lightgrey; 
+            margin-bottom: 5px;
+        }
+    }
+}
