@@ -1,0 +1,34 @@
+{
+  "name": "backend-api-2",
+  "version": "1.0.0",
+  "description": "almundo backend api hotels",
+  "main": "server.js",
+  "scripts": {
+    "docs": "esdoc",
+    "linter": "xo",
+    "dev": "nodemon server.js",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasrestrepo"
+  },
+  "keywords": [
+    "docker",
+    "node.js"
+  ],
+  "author": "Nicolas Restrepo <nicolasrestrepo34@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "celebrate": "^7.0.6",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "mongoose": "^5.0.15"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "xo": "^0.20.3"
+  }
+}
