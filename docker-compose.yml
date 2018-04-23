@@ -1,0 +1,18 @@
+version: '3'
+
+services:  
+  backend-api:
+    container_name: backend-api
+    build: ./backend-api
+    ports:
+      - 3001:3001
+
+
+  front-end: 
+    container_name: front-end
+    build: ./front-end
+    ports:
+      - 3000:3000
+    environment: 
+      API_URL: "http://backend-public:3001"
+      
